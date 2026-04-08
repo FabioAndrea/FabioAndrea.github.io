@@ -11,6 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Space+Mono:wght@400&display=swap"
         rel="stylesheet">
+
+    <script>
+        function showme() {
+            //alert("Halo Selamat Siang");
+            Swal.fire({
+                title: "Hallo!",
+                text: "selamat siang",
+                icon: "success"
+            });
+            console.log("Ini baris 18, sudah sampai sini");
+            a = 18 + 10;
+            console.log("Hasil penjumlahan:" + a);
+            c = 1 * 2 * 3;
+            console.log("Hasil perkalian:" + c);
+        }
+
+        function changeText() {
+            const element = document.getElementById("intro");
+            element.innerHTML = "Sistem Informasi ITS";
+        }
+
+        function changeButtonColor() {
+            const element = document.getElementById("tombol");
+            element.style.color = "red";
+            element.style.backgroundColor = "yellow";
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             background-color: #b3a89df2;
@@ -195,7 +224,7 @@
         <div class="foto-profil">
             <img
                 src="https://ugc.production.linktr.ee/896434f6-26f7-459b-a53c-395dfb7815e5_WhatsApp-Image-2026-01-08-at-8.26.38-AM.jpeg">
-            <h1 class="judul-linktree">PKM ITS 2026</h1>
+            <h1 id="intro" class="judul-linktree">PKM ITS 2026</h1>
         </div>
 
         <div class="link-insta">
@@ -208,7 +237,8 @@
             </a>
         </div>
 
-        <a href="https://docs.google.com/document/d/1cd8YOallKdWryhZfJceJUWEapTD9a-wtGi7J0MtGXac/edit?usp=sharing"
+        <a id="tombol"
+            href="https://docs.google.com/document/d/1cd8YOallKdWryhZfJceJUWEapTD9a-wtGi7J0MtGXac/edit?usp=sharing"
             class="btn-utama rounded-pill text-dark">
             <img src="https://ugc.production.linktr.ee/f0afed94-2adf-4911-b750-d6eb2b8bf9d8_AHkbwyK4XNfm88VUMrQ811yFtl-LWNLqSBZc6cZgbrTIjeDljdc5cgW3BYAJDQPpa9jwm29rbW9vIb9eJChZTBhr5Qkn6qI03WdM.png"
                 class="rounded-circle position-absolute"
@@ -221,6 +251,11 @@
                 </svg>
             </button>
         </a>
+
+        <button class="btn btn-primary" onclick="showme()">show me</button>
+        <button class="btn btn-primary" onclick="changeText()">Change Text</button>
+        <button class="btn btn-primary" onclick="changeButtonColor()">Change Button Color</button>
+
         <a href="https://itsacid.sharepoint.com/:f:/s/PKMITS2022/IgD_KcjeXQO3S4tGHNPIyy0pAdiSxWlE8XbTivMrZmsR2fw?e=BQv7t9"
             class="btn-utama rounded-pill text-dark">
             Database PIMNAS
